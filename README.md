@@ -3,7 +3,7 @@ Section 1
 	Years of Experience: 9 years 7 months
 
 Section 2: 
-	Build IDE: Eclipse Java EE IDE (Version: Oxygen.3a Release (4.7.3a))
+	Build IDE: Eclipse Java EE IDE (Version: spring-tool-suite-4-4.0.0.RELEASE-e4.9.0-win32.win32.x86_64)
 	JDK Version: java version "1.8.0_162"
 
 Section 3 
