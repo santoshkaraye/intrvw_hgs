@@ -1,7 +1,5 @@
 package com.card.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,7 +15,7 @@ public class MasterCard implements Card  {
 	long number;
 	
 	@Column
-	Date expiryDate;
+	String expiryDate;
 
 	public MasterCard(long number)
 	{
@@ -38,11 +36,11 @@ public class MasterCard implements Card  {
 	}
 
 
-	public Date getExpiryDate() {
+	public String getExpiryDate() {
 		return expiryDate;
 	}
 
-	public void setExpiryDate(Date expiryDate) {
+	public void setExpiryDate(String expiryDate) {
 		this.expiryDate = expiryDate;
 	}
 	
