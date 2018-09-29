@@ -29,7 +29,7 @@ public class ValidatorEngineServiceImpl implements ValidatorService{
 		try {
 			exe.awaitTermination(60, TimeUnit.SECONDS);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -42,7 +42,10 @@ public class ValidatorEngineServiceImpl implements ValidatorService{
        
         private List<? extends Card> cards;
         private String type;
-        
+        private String dateFormat="ddmmyyyy";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(dateFormat);  
+		LocalDateTime now = LocalDateTime.now();
+		String currentDate = dtf.format(now);
 
         public Task(List<? extends Card> cards, String type) {
             
@@ -59,83 +62,46 @@ public class ValidatorEngineServiceImpl implements ValidatorService{
         	   {
         		   VisaCard visa = ((VisaCard)card);
         		   long id= visa.getNumber() ;
-        		  if(!Long.toString(id).startsWith("4")) {
+        		  if(!Long.toString(id).startsWith("4") || Long.toString(id).length() != 13) {
         			  cards.clear();
         			  break;
         		  }
-        			 
-        		   if(Long.toString(id).length() != 13) {
-        			   cards.clear();
-        			   break;
-        		   }
         			   
-        		   
-        		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddmmyyyy");  
-        		   LocalDateTime now = LocalDateTime.now();
-        		   String currentDate = dtf.format(now);
-        		   
         		   visa.setExpiryDate(currentDate);
-        	   }
+        	   }else
         	   
         	   if(type.equalsIgnoreCase("master"))
         	   {
         		   MasterCard master = ((MasterCard)card);
         		   long id= master.getNumber() ;
-        		  if(!Long.toString(id).startsWith("5")) {
+        		  if(!Long.toString(id).startsWith("5") || Long.toString(id).length() != 16) {
         			  cards.clear();
         			  break;
         		  }
-        			 
-        		   if(Long.toString(id).length() != 16){
-         			  cards.clear();
-         			  break;
-         		  }
-        		   
-        		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddmmyyyy");  
-        		   LocalDateTime now = LocalDateTime.now();
-        		   String currentDate = dtf.format(now);
         		   
         		   master.setExpiryDate(currentDate);
-        	   }
-        	   
-        	   
+        	   }else
+        	           	   
         	   if(type.equalsIgnoreCase("american"))
         	   {
         		   AmericanCard american = ((AmericanCard)card);
         		   long id= american.getNumber() ;
-        		  if(!Long.toString(id).startsWith("37")){
+        		  if(!Long.toString(id).startsWith("37") || Long.toString(id).length() != 15){
         			  cards.clear();
         			  break;
         		  }
-        		   if(Long.toString(id).length() != 15){
-         			  cards.clear();
-         			  break;
-         		  }
-        		   
-        		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddmmyyyy");  
-        		   LocalDateTime now = LocalDateTime.now();
-        		   String currentDate = dtf.format(now);
         		   
         		   american.setExpiryDate(currentDate);
-        	   }
+        	   }else
         	   
-
         	   if(type.equalsIgnoreCase("discover"))
         	   {
         		   DiscoverCard discover = ((DiscoverCard)card);
         		   long id= discover.getNumber() ;
-        		  if(!Long.toString(id).startsWith("6")){
+        		  if(!Long.toString(id).startsWith("6") || Long.toString(id).length() != 16){
         			  cards.clear();
         			  break;
         		  }
-        		   if(Long.toString(id).length() != 16){
-         			  cards.clear();
-         			  break;
-         		  }
-        		   
-        		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddmmyyyy");  
-        		   LocalDateTime now = LocalDateTime.now();
-        		   String currentDate = dtf.format(now);
         		   
         		   discover.setExpiryDate(currentDate);
         	   }

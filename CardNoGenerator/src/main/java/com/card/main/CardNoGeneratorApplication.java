@@ -36,7 +36,7 @@ public class CardNoGeneratorApplication {
 		
 		validatorService.validator(cardList,type);
 		
-		if(cardList != null && cardList.size()!=0)
+		if(cardList != null && !cardList.isEmpty())
 				cardService.response(cardList);
 			
 		return cardList;

@@ -34,7 +34,7 @@ public class CCGenerationEngine implements Generator {
 			
 			long id;
 			
-		if(visaList.size() ==0)
+		if(visaList.isEmpty())
 		{
 			id = 4000000000000L;
 		}else
@@ -42,7 +42,7 @@ public class CCGenerationEngine implements Generator {
 			id = visaList.get(0).getNumber();
 		}
 			
-		visaList = new ArrayList<VisaCard>();
+		visaList = new ArrayList<>();
 			for(int i=0;i<number;i++)
 			{
 				VisaCard visa= new VisaCard(++id); 
@@ -58,7 +58,7 @@ public class CCGenerationEngine implements Generator {
 			
 			long id;
 			
-		if(masterList.size() ==0)
+		if(masterList.isEmpty())
 		{
 			id = 5000000000000000L;
 		}else
@@ -66,7 +66,7 @@ public class CCGenerationEngine implements Generator {
 			id = masterList.get(0).getNumber();
 		}
 			
-		masterList = new ArrayList<MasterCard>();
+		masterList = new ArrayList<>();
 			for(int i=0;i<number;i++)
 			{
 				MasterCard master= new MasterCard(++id); 
@@ -82,7 +82,7 @@ public class CCGenerationEngine implements Generator {
 			
 			long id;
 			
-		if(americanList.size() ==0)
+		if(americanList.isEmpty())
 		{
 			id = 370000000000000L;
 		}else
@@ -90,7 +90,7 @@ public class CCGenerationEngine implements Generator {
 			id = americanList.get(0).getNumber();
 		}
 			
-		americanList = new ArrayList<AmericanCard>();
+		americanList = new ArrayList<>();
 			for(int i=0;i<number;i++)
 			{
 				AmericanCard american= new AmericanCard(++id); 
@@ -106,7 +106,7 @@ public class CCGenerationEngine implements Generator {
 		
 		long id;
 		
-	if(discoverList.size() ==0)
+	if(discoverList.isEmpty())
 	{
 		id = 6000000000000000L;
 	}else
@@ -114,7 +114,7 @@ public class CCGenerationEngine implements Generator {
 		id = discoverList.get(0).getNumber();
 	}
 		
-	discoverList = new ArrayList<DiscoverCard>();
+	discoverList = new ArrayList<>();
 		for(int i=0;i<number;i++)
 		{
 			DiscoverCard discover= new DiscoverCard(++id); 

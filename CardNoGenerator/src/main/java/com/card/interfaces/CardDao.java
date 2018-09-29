@@ -9,11 +9,6 @@ import com.card.entity.VisaCard;
 
 public interface CardDao<T> {
 
-	//public void save(T entity);
-	
-	public T get();
-	
-	public List<T> findAll();
 
 	public void save(T entity);
 	

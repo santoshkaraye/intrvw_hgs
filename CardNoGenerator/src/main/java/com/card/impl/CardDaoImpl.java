@@ -20,34 +20,29 @@ public class CardDaoImpl<T> implements CardDao<T>{
 	@PersistenceContext
 	protected EntityManager entityManager;
 	
-	@Override
-	public T get() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public List<AmericanCard> findAllAmericanCards() {
-		List<AmericanCard> americanCards= entityManager.createQuery("FROM AmericanCard v ORDER BY v.number DESC").getResultList();
-		return americanCards;
+		return entityManager.createQuery("FROM AmericanCard v ORDER BY v.number DESC").getResultList();
+		 
 	}
 	
 	@Override
 	public List<DiscoverCard> findAllDiscoverCards() {
-		List<DiscoverCard> cards= entityManager.createQuery("FROM DiscoverCard v ORDER BY v.number DESC").getResultList();
-		return cards;
+		return  entityManager.createQuery("FROM DiscoverCard v ORDER BY v.number DESC").getResultList();
+		
 	}
 	
 	@Override
 	public List<MasterCard> findAllMasterCards() {
-		List<MasterCard> cards= entityManager.createQuery("FROM MasterCard v ORDER BY v.number DESC").getResultList();
-		return cards;
+		return entityManager.createQuery("FROM MasterCard v ORDER BY v.number DESC").getResultList();
+		
 	}
 	
 	@Override
 	public List<VisaCard> findAllVisaCards() {
-		List<VisaCard> cards= entityManager.createQuery("FROM VisaCard v ORDER BY v.number DESC").getResultList();
-		return cards;
+		return entityManager.createQuery("FROM VisaCard v ORDER BY v.number DESC").getResultList();
+		
 	}
 
 	@Override
@@ -56,17 +51,6 @@ public class CardDaoImpl<T> implements CardDao<T>{
 		
 					entityManager.persist(entity);
 	}
-
-
-	@Override
-	public List<T> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-
-	
 
 
 }
