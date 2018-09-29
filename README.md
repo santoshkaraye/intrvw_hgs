@@ -8,9 +8,11 @@ Section 2:
 
 Section 3 
 a)	Sonar lint / EclEmma scan Snapshot 
+   [SonarLint] (https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/sonarLint.JPG)
 b)	Final Output Snapshot 
+	[Final Output](https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/output.jpg)
 c)	Junit Coverage Snapshot
-Note: (You can link directly to the raw version of an image from your image folder. Hence from section 1.1 if your GIT Link is : https://github.com/nescafe2018/intrvw_sq , then you can have the following text in your readme ![SonarLint] (https://github.com/nescafe2018/intrvw_sq/<Link of you image) )
+
 
 Section 4 
 Licensing 
