@@ -7,10 +7,8 @@ Section 2:
 	JDK Version: java version "1.8.0_162"
 
 Section 3 
-a)	Sonar lint / EclEmma scan Snapshot 
-   [SonarLint] (https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/sonarLint.JPG)
-b)	Final Output Snapshot 
-	[Final Output](https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/output.jpg)
+a)	Sonar lint / EclEmma scan Snapshot(https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/sonarLint.JPG)
+b)	Final Output Snapshot(https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/output.jpg)
 c)	Junit Coverage Snapshot
 
 
