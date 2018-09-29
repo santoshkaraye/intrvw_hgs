@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.card.interfaces.Card;
 import com.card.interfaces.CardGeneratorService;
+import com.card.interfaces.ValidatorService;
 
 @RestController
 @EnableAutoConfiguration
@@ -24,12 +25,20 @@ public class CardNoGeneratorApplication {
 	@Autowired
 	CardGeneratorService cardService;
 	
+	@Autowired
+	ValidatorService validatorService;
+	
 	@RequestMapping("/genrator")
 	List<? extends Card> generateCard(Integer count,String type)
 	{
 		
 		List<? extends Card> cardList = cardService.generateCard(count, type);
-		cardService.response(cardList);
+		
+		validatorService.validator(cardList,type);
+		
+		if(cardList != null && cardList.size()!=0)
+				cardService.response(cardList);
+			
 		return cardList;
 	}
 	

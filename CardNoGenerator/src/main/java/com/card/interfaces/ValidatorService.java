@@ -1,8 +1,9 @@
 package com.card.interfaces;
 
-import java.util.Set;
+import java.util.List;
 
 public interface ValidatorService {
-	public <T> boolean cardValidator(Set<T> cardList);
+
+	public List<? extends Card> validator(List<? extends Card> cards, String type);
 
 }
