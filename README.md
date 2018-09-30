@@ -9,7 +9,7 @@ Section 2:
 Section 3 
 a)	Sonar lint / EclEmma scan Snapshot(https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/sonarLint.JPG)
 b)	Final Output Snapshot(https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/output.jpg)
-c)	Junit Coverage Snapshot
+c)	Junit Coverage Snapshot(https://github.com/santoshkaraye/intrvw_hgs/tree/master/images_snapshot/JunitTestCases.JPG)
 
 
 Section 4 
